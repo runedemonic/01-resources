@@ -118,7 +118,7 @@ print('hello')
   * 상대경로
   * 마크다운.assets 폴더를 같이 공유하면!
 
-![bonobono](마크다운.assets/bonobono.png)
+![bonobono](images/마크다운.assets/bonobono.png)
 
 ## 인용문
 
