@@ -111,4 +111,8 @@ if len(painting_size_list) != 0:
     print(max(painting_size_list))
 else:
     print(0)
+<<<<<<< HEAD
     print(0)
+=======
+    print(0)
+>>>>>>> c9ef8f9c07039487883c1659107900a1b39f5385
