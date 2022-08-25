@@ -10,14 +10,12 @@ class Artist(models.Model):
     name = models.CharField(max_length=30)
     debut = models.DateField()
 
+# Genre는 Album을 0~여러개 가진다. / Album은 하나의 Genre를 가짐
+# 예) 트로트 -> 네박자, .... 
+# Artist는 Album을 0~여러개 가진다. / Album은 한명의 가수를 가짐
+# 예) BTS -> Butter, ....
+class Album(models.Model):
+    name = models.CharField(max_length=30)
+    genre = models.ForeignKey('Genre', on_delete=models.CASCADE)
+    artist = models.ForeignKey('Artist', on_delete=models.CASCADE)
 
-
-
-# class Person:
-#     pass 
-
-# # iu라고 하는 변수의 이름을 가진
-# # Person 클래스의 인스턴스를 만드는 코드는?
-# iu = Person() 
-# # iu의 name 속성으로 아이유라고 하는 코드는?
-# iu.name = '아이유'
