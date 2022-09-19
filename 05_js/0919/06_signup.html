@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label for="password1">비밀번호</label>
+    <input type="password" name="password" id="password1">
+    <label for="password_confirmation">비밀번호 확인</label>
+    <input type="password" name="password_confirmation" id="password_confirmation">
+    <button id="confirm" onclick="confirm()">가입하기</button>
+</form>
+<script>
+    const match =/\d{8}/
+    console.log(match.test('123141233'))
+    function confirm() {
+        const password = document.getElementById('password1').value
+        const password_confirmation = document.getElementById("password_confirmation").value
+        if (password !== password_confirmation){
+            alert('비밀번호가 일치하지 않습니다!')
+        }else {
+            alert('성공')
+        }
+        if(match.password !== true){
+            alert('비밀번호는 최소 8자리여야합니다')
+        }
+    }
+</script>
+</body>
+</html>
